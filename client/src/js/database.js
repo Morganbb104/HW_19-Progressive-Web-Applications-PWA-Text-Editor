@@ -34,7 +34,7 @@ export const getDb = async () =>{
   const tx = jateDB.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
   // use getALL() method to get all content from db
-  const request = store.store.getAll();;
+  const request = store.getAll();;
   const result = await request;
   console.log('🚀 - data saved to the jateDB', result);
 };
